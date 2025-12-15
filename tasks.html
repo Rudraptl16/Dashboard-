@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasks | Dashboard</title>
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+</head>
+<body data-theme="dark">
+  <header class="header">
+    <div class="container">
+      <h1><a class="logo" href="index.html">Dashboard</a></h1>
+      <nav class="navbar active">
+        <div class="container">
+          <ul class="navbar-list">
+            <li><a href="index.html" class="navbar-link icon-box"><span class="material-symbols-rounded icon">grid_view</span><span>Home</span></a></li>
+            <li><a href="projects.html" class="navbar-link icon-box"><span class="material-symbols-rounded icon">folder</span><span>Projects</span></a></li>
+            <li><a href="tasks.html" class="navbar-link icon-box active"><span class="material-symbols-rounded icon">list</span><span>Tasks</span></a></li>
+            <li><a href="reports.html" class="navbar-link icon-box"><span class="material-symbols-rounded icon">bar_chart</span><span>Reports</span></a></li>
+            <li><a href="team.html" class="navbar-link icon-box"><span class="material-symbols-rounded icon">groups</span><span>Team</span></a></li>
+            <li><a href="analysts.html" class="navbar-link icon-box"><span class="material-symbols-rounded icon">support_agent</span><span>Analysts</span></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="container article space-block">
+      <div class="page-hero">
+        <h2 class="h2 article-title">Tasks</h2>
+        <p class="article-subtitle">Pending, working, and completed tasks with live updates.</p>
+      </div>
+
+      <section class="tasks" id="tasks">
+        <div class="section-title-wrapper">
+          <h2 class="section-title">Live Tasks</h2>
+          <div class="live-badge pill">Auto-updating</div>
+        </div>
+
+        <div class="task-stats">
+          <div class="card stat-card">
+            <p class="stat-label">Total</p>
+            <p class="stat-value" data-task-total>0</p>
+          </div>
+          <div class="card stat-card">
+            <p class="stat-label">Working</p>
+            <p class="stat-value" data-task-working>0</p>
+          </div>
+          <div class="card stat-card">
+            <p class="stat-label">Complete</p>
+            <p class="stat-value" data-task-complete>0</p>
+          </div>
+        </div>
+
+        <div class="task-filters" data-task-filters>
+          <button class="chip active" data-task-filter="All">All</button>
+          <button class="chip" data-task-filter="Pending">Pending</button>
+          <button class="chip" data-task-filter="Working">Working</button>
+          <button class="chip" data-task-filter="Complete">Complete</button>
+        </div>
+
+        <ul class="tasks-list" data-tasks-list></ul>
+
+        <section class="task-board">
+          <div class="task-column">
+            <div class="task-column-head">
+              <span class="dot pending"></span>
+              <p>Pending</p>
+            </div>
+            <ul class="task-board-list" data-task-board="Pending"></ul>
+          </div>
+          <div class="task-column">
+            <div class="task-column-head">
+              <span class="dot working"></span>
+              <p>Working</p>
+            </div>
+            <ul class="task-board-list" data-task-board="Working"></ul>
+          </div>
+          <div class="task-column">
+            <div class="task-column-head">
+              <span class="dot complete"></span>
+              <p>Complete</p>
+            </div>
+            <ul class="task-board-list" data-task-board="Complete"></ul>
+          </div>
+        </section>
+      </section>
+    </article>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
+

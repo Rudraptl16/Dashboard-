@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Dashboard</title>
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+</head>
+<body data-theme="dark">
+  <header class="header">
+    <div class="container">
+      <h1><a class="logo" href="index.html">Dashboard</a></h1>
+      <nav class="navbar active">
+        <div class="container">
+          <ul class="navbar-list">
+            <li><a href="index.html" class="navbar-link icon-box"><span class="material-symbols-rounded icon">grid_view</span><span>Home</span></a></li>
+            <li><a href="projects.html" class="navbar-link icon-box active"><span class="material-symbols-rounded icon">folder</span><span>Projects</span></a></li>
+            <li><a href="tasks.html" class="navbar-link icon-box"><span class="material-symbols-rounded icon">list</span><span>Tasks</span></a></li>
+            <li><a href="reports.html" class="navbar-link icon-box"><span class="material-symbols-rounded icon">bar_chart</span><span>Reports</span></a></li>
+            <li><a href="team.html" class="navbar-link icon-box"><span class="material-symbols-rounded icon">groups</span><span>Team</span></a></li>
+            <li><a href="analysts.html" class="navbar-link icon-box"><span class="material-symbols-rounded icon">support_agent</span><span>Analysts</span></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="container article space-block">
+      <div class="page-hero">
+        <h2 class="h2 article-title">Projects</h2>
+        <p class="article-subtitle">Live portfolio of active, planned, and QA projects.</p>
+      </div>
+
+      <section class="projects" id="projects">
+        <div class="section-title-wrapper">
+          <h2 class="section-title">Recent Projects</h2>
+          <div class="live-badge pill">Live</div>
+        </div>
+        <ul class="project-list live-project-list" data-live-projects></ul>
+      </section>
+
+      <section class="projects projects-static" id="projects-static">
+        <div class="section-title-wrapper">
+          <h2 class="section-title">Highlights</h2>
+          <span class="card-badge blue radius-pill">Context menu: right-click</span>
+        </div>
+        <ul class="project-list">
+          <li class="project-item">
+            <div class="card project-card">
+              <time class="card-date" datetime="2025-01-12">Jan 12, 2025</time>
+              <h3 class="card-title"><a href="#">Observability Edge</a></h3>
+              <div class="card-badge cyan">Development</div>
+              <p class="card-text">Unified telemetry with streaming alerts for core services.</p>
+              <div class="card-progress-box">
+                <div class="progress-label"><span class="progress-title">Progress</span><data class="progress-data" value="68">68%</data></div>
+                <div class="progress-bar"><div class="progress" data-static-progress="68" data-static-color="pacific"></div></div>
+              </div>
+              <p class="team-line">Team: Ava, Ethan, Sophia</p>
+            </div>
+          </li>
+          <li class="project-item">
+            <div class="card project-card">
+              <time class="card-date" datetime="2025-01-05">Jan 05, 2025</time>
+              <h3 class="card-title"><a href="#">Customer 360</a></h3>
+              <div class="card-badge orange">Planning</div>
+              <p class="card-text">New single-view experience with AI-driven insights.</p>
+              <div class="card-progress-box">
+                <div class="progress-label"><span class="progress-title">Progress</span><data class="progress-data" value="34">34%</data></div>
+                <div class="progress-bar"><div class="progress" data-static-progress="34" data-static-color="coral"></div></div>
+              </div>
+              <p class="team-line">Team: Noah, Priya, Leo</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <div class="modal" data-project-modal>
+    <div class="modal-backdrop" data-modal-close></div>
+    <div class="modal-body">
+      <button class="modal-close" data-modal-close aria-label="Close">
+        <span class="material-symbols-rounded icon">close</span>
+      </button>
+      <p class="modal-label">Project</p>
+      <h3 class="modal-title" data-modal-title>—</h3>
+      <p class="modal-meta" data-modal-status>—</p>
+      <p class="modal-text" data-modal-owner>—</p>
+      <p class="modal-text" data-modal-eta>—</p>
+      <div class="progress-bar modal-progress">
+        <div class="progress" data-modal-progress></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
+
